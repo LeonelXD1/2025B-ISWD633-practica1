@@ -6,8 +6,15 @@ docker exec <nombre contenedor> <comando> <argumentos opcionales>
 ```
 # COMPLETAR
 ### ¿Para qué se usa el comando ls?
+Lista los archivos y carpetas que exiten dentro del contenedor.
 ### ¿Para qué sirve el argumento -l junto al comando ls?
+Lista los archivos y carpetas con más detalles como el propietario, la fecha y el tamaño.
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
+```
+docker exec webjenkins ls -l
+```
+<img width="561" height="472" alt="image" src="https://github.com/user-attachments/assets/cdd3366b-5b71-423d-8a84-a29dc87a2af0" />
+
 # COMPLETAR
 # COLOCAR UNA CAPTURA DE PANTALLA
 
@@ -30,6 +37,9 @@ docker exec -i <nombre contenedor> /bin/bash
 ```
 docker exec -i <nombre contenedor> bash 
 ```
+
+Se observa una intermitencia en la entrada, entramos en la terminal del contenedor
+
 **Considerar**
 - /bin/bash: Al especificar la ruta completa del shell, Docker buscará el ejecutable /bin/bash en el sistema de archivos del contenedor y lo ejecutará. Esto es útil cuando quieres asegurarte de que se está utilizando un shell específico que está ubicado en una ubicación conocida en el sistema de archivos del contenedor. 
 - bash: Al especificar solo el nombre del shell, Docker buscará el comando bash en las rutas del sistema (por lo general, en las rutas definidas en la variable de entorno PATH) del contenedor y lo ejecutará. Esto asume que bash está disponible en alguna de las rutas del sistema definidas en el contenedor.
@@ -43,6 +53,8 @@ Ejecutar
 ```
 whoami
 ```
+<img width="608" height="137" alt="image" src="https://github.com/user-attachments/assets/9108bdd9-645c-450e-86bb-e7dd27d26073" />
+
 # COLOCAR UNA CAPTURA DE PANTALLA
 
 **Si se visualiza el mensaje command not found, considerar**
@@ -62,10 +74,11 @@ docker exec -it <nombre contenedor> <programa o comando>
 ```
 
 ### Ahora puedes acceder al contenedor de jenkins y obtener la contraseña ubicada en /var/jenkins_home/secrets/initialAdminPassword
-
+2bb7d76f771846ee8922e86c2a749a9a
 # COMPLETAR
 
 ### Colocar una captura de pantalla de la ventana que aparece después de colocar la contraseña.
+<img width="3838" height="1934" alt="image" src="https://github.com/user-attachments/assets/914ba42e-7cba-4bb3-b756-252588f8f038" />
 
 **Para este punto no es necesario continuar con la instalación de Jenkins**
 
